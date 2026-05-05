@@ -2,17 +2,31 @@ import React, { useContext } from "react";
 import AccordionContext from "./AccordionContext";
 import "./AccordionStyles.css";
 
-function AccordionHeader({ children, ...restProps }) {
-  const [AccordionShow, setAccordionShow] = useContext(AccordionContext);
+function AccordionHeader({ children, id, ...restProps }) {
+  const [isOpen, toggleAccordion] = useContext(AccordionContext);
 
-  function handleClick() {
-    setAccordionShow(!AccordionShow);
+  function handleKeyDown(event) {
+    // Space and Enter keys toggle the accordion (matches button behavior)
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      toggleAccordion();
+    }
   }
 
   return (
-    <div className="accordion-header" onClick={handleClick} {...restProps}>
+    <div
+      className="accordion-header"
+      id={`accordion-header-${id}`}
+      onClick={toggleAccordion}
+      onKeyDown={handleKeyDown}
+      tabIndex={0}
+      role="button"
+      aria-expanded={isOpen}
+      aria-controls={`accordion-body-${id}`}
+      {...restProps}
+    >
       {children}
-      {AccordionShow ? (
+      {isOpen ? (
         <img
           className="accordion-image"
           src="../images/icons/close-slim.png"
