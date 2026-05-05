@@ -11,9 +11,9 @@ function AccordionCompound() {
     <AccordionWrapper>
       <AccordionTitle>Frequently Asked Questions</AccordionTitle>
       {FAQData.map((item) => (
-        <AccordionItem key={item.id}>
-          <AccordionHeader>{item.header}</AccordionHeader>
-          <AccordionBody>{item.body}</AccordionBody>
+        <AccordionItem key={item.id} id={item.id}>
+          <AccordionHeader id={item.id}>{item.header}</AccordionHeader>
+          <AccordionBody id={item.id}>{item.body}</AccordionBody>
         </AccordionItem>
       ))}
     </AccordionWrapper>

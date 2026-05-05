@@ -1,14 +1,18 @@
-import React, { useState } from "react";
-import AccordionContext from "./AccordionContext";
+import React, { useContext } from "react";
+import AccordionContext, { AccordionWrapperContext } from "./AccordionContext";
 import "./AccordionStyles.css";
 
-function AccordionItem({ children, ...restProps }) {
-  const [AccordionShow, setAccordionShow] = useState(false);
+function AccordionItem({ id, children, ...restProps }) {
+  const { activeItemId, setActiveItemId } = useContext(AccordionWrapperContext);
+  const isOpen = activeItemId === id;
+
+  // Toggle this item: close if already open, open and close others if closed
+  function toggleAccordion() {
+    setActiveItemId(isOpen ? null : id);
+  }
+
   return (
-    <AccordionContext.Provider
-      value={[AccordionShow, setAccordionShow]}
-      {...restProps}
-    >
+    <AccordionContext.Provider value={[isOpen, toggleAccordion]} {...restProps}>
       <div className="accordion-item">{children}</div>
     </AccordionContext.Provider>
   );
