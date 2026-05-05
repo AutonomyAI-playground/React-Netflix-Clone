@@ -4,7 +4,7 @@ import "./MoviesStyles.css";
 function PlayerVideo({ children, ...restProps }) {
   return (
     <video className="player-video" controls {...restProps}>
-      <source {...restProps} />
+      {children}
     </video>
   );
 }
