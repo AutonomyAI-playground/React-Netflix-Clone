@@ -1,0 +1,16 @@
+// Import global styles to match the main application styling
+import "../public/style.css";
+
+/** @type { import('@storybook/react-webpack5').Preview } */
+const preview = {
+  parameters: {
+    controls: {
+      matchers: {
+        color: /(background|color)$/i,
+        date: /Date$/i,
+      },
+    },
+  },
+};
+
+export default preview;
