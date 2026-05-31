@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import SigninPage from "./pages/SigninPage";
 import SignupPage from "./pages/SignupPage";
 import BrowsePage from "./pages/BrowsePage";
+import SpacesLandingPage from "./pages/SpacesLandingPage";
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
         </Route>
         <Route path="/browse">
           <BrowsePage />
+        </Route>
+        <Route path="/spaces">
+          <SpacesLandingPage />
         </Route>
       </Switch>
     </Router>
