@@ -87,3 +87,23 @@
 .header-link-bold {
   font-weight: bolder;
 }
+
+.header-wrapper-accordion {
+  background-color: #000;
+  padding: 30px 50px;
+}
+
+@media (max-width: 550px) {
+  .header-wrapper-accordion {
+    padding: 15px 20px;
+  }
+}
+
+.navbar-accordion {
+  max-width: 1850px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-right: auto;
+  margin-left: auto;
+}
