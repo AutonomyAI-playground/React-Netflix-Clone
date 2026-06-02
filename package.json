@@ -17,7 +17,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,15 +37,27 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.24",
+    "@storybook/addon-interactions": "7.6.24",
+    "@storybook/addon-links": "^7.6.24",
+    "@storybook/addon-onboarding": "^1.0.11",
+    "@storybook/blocks": "7.6.24",
+    "@storybook/preset-create-react-app": "7.6.24",
+    "@storybook/react": "^7.6.24",
+    "@storybook/react-webpack5": "^7.6.24",
+    "@storybook/test": "7.6.24",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^2.5.1",
+    "prop-types": "^15.8.1",
+    "storybook": "^7.6.24",
     "stylelint": "^13.3.3",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-csstree-validator": "^1.8.0",
-    "stylelint-scss": "^3.17.2"
+    "stylelint-scss": "^3.17.2",
+    "webpack": "^5.107.2"
   }
 }
