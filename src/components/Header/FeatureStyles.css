@@ -7,13 +7,18 @@
 .feature-title-home,
 .feature-title-browse {
   color: white;
+}
+
+.feature-title-movies {
+  color: green;
   max-width: 640px;
   font-size: 50px;
   font-weight: 700;
   margin: auto;
 }
 
-.feature-title-browse {
+.feature-title-browse,
+.feature-title-movies {
   margin: initial;
   line-height: normal;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
@@ -22,7 +27,8 @@
 
 @media (max-width: 550px) {
   .feature-title-home,
-  .feature-title-browse {
+  .feature-title-browse,
+  .feature-title-movies {
     font-size: 30px;
   }
 }
@@ -30,6 +36,10 @@
 .feature-subtitle-home,
 .feature-subtitle-browse {
   color: white;
+}
+
+.feature-subtitle-movies {
+  color: green;
   font-size: 26px;
   font-weight: normal;
   margin: 16px auto;
@@ -45,7 +55,8 @@
   padding: 10px;
 }
 
-.feature-subtitle-browse {
+.feature-subtitle-browse,
+.feature-subtitle-movies {
   max-width: 640px;
   margin: initial;
   font-size: 22px;
@@ -55,7 +66,8 @@
 
 @media (max-width: 550px) {
   .feature-subtitle-home,
-  .feature-subtitle-browse {
+  .feature-subtitle-browse,
+  .feature-subtitle-movies {
     font-size: 18px;
   }
 }
