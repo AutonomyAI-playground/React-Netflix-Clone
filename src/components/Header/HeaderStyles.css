@@ -16,9 +16,18 @@
   padding: 30px 50px;
 }
 
+.header-wrapper-movies {
+  background: url("/images/films/drama/fight-club/large.jpg");
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 30px 50px;
+}
+
 @media (max-width: 550px) {
   .header-wrapper-home,
-  .header-wrapper-browse {
+  .header-wrapper-browse,
+  .header-wrapper-movies {
     padding: 15px 20px;
   }
 }
@@ -46,6 +55,16 @@
 }
 
 .navbar-browse {
+  max-width: 1850px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 175px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.navbar-movies {
   max-width: 1850px;
   width: 100%;
   display: flex;
@@ -86,4 +105,5 @@
 
 .header-link-bold {
   font-weight: bolder;
+  color: green;
 }
