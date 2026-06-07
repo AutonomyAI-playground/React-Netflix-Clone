@@ -3,10 +3,11 @@ import AccordionContext from "./AccordionContext";
 import "./AccordionStyles.css";
 
 function AccordionItem({ children, ...restProps }) {
-  const [AccordionShow, setAccordionShow] = useState(false);
+  // Each accordion item maintains its own expanded/collapsed state
+  const [accordionShow, setAccordionShow] = useState(false);
   return (
     <AccordionContext.Provider
-      value={[AccordionShow, setAccordionShow]}
+      value={[accordionShow, setAccordionShow]}
       {...restProps}
     >
       <div className="accordion-item">{children}</div>

@@ -3,9 +3,10 @@ import AccordionContext from "./AccordionContext";
 import "./AccordionStyles.css";
 
 function AccordionBody({ children, ...restProps }) {
-  const [AccordionShow, setAccordionShow] = useContext(AccordionContext);
+  const [accordionShow] = useContext(AccordionContext);
 
-  return AccordionShow ? (
+  // Only render the body content when the accordion is expanded
+  return accordionShow ? (
     <div className="accordion-body" {...restProps}>
       {children}
     </div>

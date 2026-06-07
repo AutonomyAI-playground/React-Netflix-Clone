@@ -6,6 +6,10 @@ import AccordionHeader from "../components/Accordion/AccordionHeader";
 import AccordionBody from "../components/Accordion/AccordionBody";
 import FAQData from "../data/faqs.json";
 
+/**
+ * AccordionCompound renders the FAQ section with collapsible accordion items.
+ * Each item can be expanded/collapsed independently to show/hide the answer.
+ */
 function AccordionCompound() {
   return (
     <AccordionWrapper>
