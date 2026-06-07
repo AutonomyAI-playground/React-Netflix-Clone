@@ -3,16 +3,17 @@ import AccordionContext from "./AccordionContext";
 import "./AccordionStyles.css";
 
 function AccordionHeader({ children, ...restProps }) {
-  const [AccordionShow, setAccordionShow] = useContext(AccordionContext);
+  const [accordionShow, setAccordionShow] = useContext(AccordionContext);
 
-  function handleClick() {
-    setAccordionShow(!AccordionShow);
-  }
+  const handleClick = () => {
+    setAccordionShow(!accordionShow);
+  };
 
   return (
     <div className="accordion-header" onClick={handleClick} {...restProps}>
       {children}
-      {AccordionShow ? (
+      {/* Toggle between close and add icons based on expanded state */}
+      {accordionShow ? (
         <img
           className="accordion-image"
           src="../images/icons/close-slim.png"
