@@ -8,7 +8,7 @@ import FooterLink from "../components/Footer/FooterLink";
 function FooterCompound() {
   return (
     <FooterWrapper>
-      <FooterTitle>Questions? Contact us.</FooterTitle>
+      <FooterTitle>Questions? Call 1-844-505-2993</FooterTitle>
       <FooterRow>
         <FooterColumn>
           <FooterLink>FAQ</FooterLink>
@@ -26,12 +26,13 @@ function FooterCompound() {
           <FooterLink>Account</FooterLink>
           <FooterLink>Ways to Watch</FooterLink>
           <FooterLink>Corporate Information</FooterLink>
-          <FooterLink>Netflix Originals</FooterLink>
+          <FooterLink>Only on Netflix</FooterLink>
         </FooterColumn>
         <FooterColumn>
           <FooterLink>Media Center</FooterLink>
           <FooterLink>Terms of Use</FooterLink>
           <FooterLink>Contact Us</FooterLink>
+          <FooterLink>Ad Choices</FooterLink>
         </FooterColumn>
       </FooterRow>
     </FooterWrapper>
