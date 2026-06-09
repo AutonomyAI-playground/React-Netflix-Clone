@@ -7,7 +7,7 @@ import FeatureWrapper from "../components/Header/FeatureWrapper";
 import FeatureTitle from "../components/Header/FeatureTitle";
 import FeatureSubTitle from "../components/Header/FeatureSubTitle";
 import PlayButton from "../components/Header/PlayButton";
-import HeaderLink from "../components/Header/HeaderLink";
+import ToggleButton from "../components/Header/ToggleButton";
 import AllSlidesWrapper from "../components/Movies/AllSlidesWrapper";
 import SlideWrapper from "../components/Movies/SlideWrapper";
 import SlideTitle from "../components/Movies/SlideTitle";
@@ -76,22 +76,18 @@ function BrowsePage() {
       <HeaderWrapper className="header-wrapper-browse">
         <NavBar className="navbar-browse">
           <Logo />
-          <HeaderLink
-            className={
-              category === "films" ? "header-link-bold" : "header-link"
-            }
+          <ToggleButton
+            isActive={category === "films"}
             onClick={() => setCategory("films")}
           >
             Films
-          </HeaderLink>
-          <HeaderLink
-            className={
-              category === "series" ? "header-link-bold" : "header-link"
-            }
+          </ToggleButton>
+          <ToggleButton
+            isActive={category === "series"}
             onClick={() => setCategory("series")}
           >
             Series
-          </HeaderLink>
+          </ToggleButton>
         </NavBar>
         <FeatureWrapper>
           <FeatureTitle className="feature-title-browse">

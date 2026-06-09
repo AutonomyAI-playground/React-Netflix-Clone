@@ -87,3 +87,38 @@
 .header-link-bold {
   font-weight: bolder;
 }
+
+.toggle-button,
+.toggle-button-active {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 16px;
+  margin-left: 25px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.toggle-button:hover {
+  color: #e5e5e5;
+}
+
+.toggle-button-active {
+  font-weight: 700;
+  color: #fff;
+}
+
+.toggle-button-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 3px;
+  background-color: #e50914;
+  border-radius: 2px 2px 0 0;
+}
